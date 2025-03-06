@@ -13,7 +13,7 @@ const Destinations = () => {
 
    
         <div className="relative text-center z-10">
-          <h1 className="text-5xl md:text-6xl font-bold">Explore Breathtaking Destinations</h1>
+          <h1 className="text-3xl md:text-5xl font-bold">Explore Breathtaking Destinations</h1>
           <p className="mt-4 text-lg md:text-xl">Find your next adventure with us</p>
         </div>
       </div>
