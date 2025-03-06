@@ -17,17 +17,27 @@ const BookingPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-     
-      <div className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center text-white" 
-        style={{ backgroundImage: `url(${assets.bookingImg})` }}>
+      {/* Hero Section with Motion Effect */}
+      <motion.div
+        className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center text-white"
+        style={{ backgroundImage: `url(${assets.bookingImg})` }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative text-center px-6">
+        <motion.div
+          className="relative text-center px-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <h1 className="text-4xl md:text-5xl font-bold">Book Your Next Adventure</h1>
           <p className="mt-4 text-lg md:text-xl">Plan the perfect trip with Touring Treasures</p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-     
+      {/* Booking Form Section with Motion Effect */}
       <div className="flex items-center justify-center px-4 py-12">
         <motion.div
           className="bg-white shadow-lg rounded-lg p-8 mt-10 max-w-3xl w-full"
@@ -40,86 +50,49 @@ const BookingPage = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Select a Tour Package
-              </label>
-              <select
-                value={selectedTour}
-                onChange={(e) => setSelectedTour(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
+            {/* Input Fields with Motion Effects */}
+            {[
+              { label: "Select a Tour Package", type: "select", value: selectedTour, setValue: setSelectedTour, options: ["Panafest Tour 2025 - $2,500", "Safari Adventure - $3,000", "Cultural Heritage Tour - $2,200"] },
+              { label: "Select Travel Date", type: "date", value: travelDate, setValue: setTravelDate },
+              { label: "Full Name", type: "text", value: fullName, setValue: setFullName, placeholder: "Enter your full name" },
+              { label: "Email", type: "email", value: email, setValue: setEmail, placeholder: "Enter your email" },
+              { label: "Phone Number", type: "tel", value: phone, setValue: setPhone, placeholder: "Enter your phone number" },
+              { label: "Number of Participants", type: "number", value: participants, setValue: setParticipants, min: "1" },
+            ].map((field, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <option value="">Choose a Package</option>
-                <option value="Panafest Tour 2025">Panafest Tour 2025 - $2,500</option>
-                <option value="Safari Adventure">Safari Adventure - $3,000</option>
-                <option value="Cultural Heritage Tour">Cultural Heritage Tour - $2,200</option>
-              </select>
-            </div>
+                <label className="block text-gray-700 font-medium mb-2">{field.label}</label>
+                {field.type === "select" ? (
+                  <select
+                    value={field.value}
+                    onChange={(e) => field.setValue(e.target.value)}
+                    className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  >
+                    <option value="">Choose a Package</option>
+                    {field.options.map((option, i) => (
+                      <option key={i} value={option}>{option}</option>
+                    ))}
+                  </select>
+                ) : (
+                  <motion.input
+                    type={field.type}
+                    value={field.value}
+                    onChange={(e) => field.setValue(e.target.value)}
+                    className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                    placeholder={field.placeholder}
+                    whileFocus={{ scale: 1.05 }}
+                  />
+                )}
+              </motion.div>
+            ))}
 
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Select Travel Date
-              </label>
-              <input
-                type="date"
-                value={travelDate}
-                onChange={(e) => setTravelDate(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Full Name</label>
-              <input
-                type="text"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                placeholder="Enter your full name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                placeholder="Enter your email"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Number of Participants
-              </label>
-              <input
-                type="number"
-                value={participants}
-                onChange={(e) => setParticipants(e.target.value)}
-                min="1"
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
+            {/* Submit Button with Motion Effect */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
