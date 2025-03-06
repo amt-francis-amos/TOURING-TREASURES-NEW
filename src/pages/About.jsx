@@ -4,9 +4,9 @@ import { assets } from "../assets/assets";
 const About = () => {
   return (
     <div className="relative">
-     
+   
       <div
-        className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-white"
+        className="relative h-[470px] bg-cover bg-center flex items-center justify-center text-white"
         style={{ backgroundImage: `url(${assets.image6})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -18,7 +18,7 @@ const About = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-5xl md:text-6xl font-bold"
+            className="text-4xl md:text-5xl font-bold"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -31,16 +31,17 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Discover our story, our mission, and the values that drive us to create amazing experiences.
+            Discover our story, our mission, and the values that drive us to create amazing travel experiences.
           </motion.p>
         </motion.div>
       </div>
 
-     
+      {/* About Content */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-         
+        <div className="flex flex-col md:flex-row justify-between gap-12">
+          {/* Image Section */}
           <motion.div
+            className="w-full md:w-1/2"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -48,34 +49,33 @@ const About = () => {
             <img
               src={assets.image7}
               alt="About Us"
-              className="rounded-xl shadow-lg w-full object-cover"
+              className="rounded-xl shadow-lg w-full h-[400px] object-cover"
             />
           </motion.div>
 
-         
+          {/* Text Section */}
           <motion.div
+            className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-bold text-gray-800 mb-2">
               Who We Are
             </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full mb-6"></div>  
+            
             <p className="text-lg text-gray-600 mb-4">
-              We are passionate about creating exceptional experiences for travelers worldwide. Our mission is to help you
-              explore new destinations with ease and comfort.
+              We are a passionate travel and tour company dedicated to creating unforgettable experiences for travelers worldwide. 
+              Our journey began with a simple goal: to make travel seamless, exciting, and accessible to everyone. Whether you're 
+              seeking adventure, relaxation, or cultural exploration, we are committed to making your trip hassle-free and memorable.
             </p>
-            <p className="text-lg text-gray-600">
-              With a dedicated team of travel experts, we ensure that every journey is seamless, memorable, and full of adventure.
+            <p className="text-lg text-gray-600 mb-4">
+              With years of experience in the industry, we have built strong relationships with global partners, ensuring top-tier 
+              services at competitive prices. From customized tour packages to guided group trips, we offer a range of travel solutions 
+              tailored to your needs. Our expert team is always ready to assist, providing insightful recommendations and support 
+              throughout your journey.
             </p>
-
-            <motion.button
-              className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Learn More
-            </motion.button>
           </motion.div>
         </div>
       </div>
