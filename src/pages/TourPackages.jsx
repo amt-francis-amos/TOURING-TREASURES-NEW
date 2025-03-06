@@ -18,7 +18,7 @@ const ToursPage = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-5xl md:text-6xl font-bold"
+            className="text-3xl md:text-5xl font-bold"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
