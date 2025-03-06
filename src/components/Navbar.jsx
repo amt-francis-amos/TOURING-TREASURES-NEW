@@ -67,7 +67,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about" className="hover:text-blue-500 transition duration-300">
+            <Link to="/about" className="hover:text-blue-500 transition duration-300" onClick={() => setMenuOpen(false)}>
               About
             </Link>
           </li>
