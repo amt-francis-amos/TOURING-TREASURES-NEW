@@ -63,7 +63,7 @@ const About = () => {
             <h2 className="text-4xl font-bold text-gray-800 mb-2">
               Who We Are
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full mb-6"></div>  
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-900 rounded-full mb-6"></div>  
             
             <p className="text-lg text-gray-600 mb-4">
               We are a passionate travel and tour company dedicated to creating unforgettable experiences for travelers worldwide. 
