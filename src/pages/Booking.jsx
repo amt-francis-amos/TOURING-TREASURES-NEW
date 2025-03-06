@@ -77,7 +77,7 @@ const BookingPage = () => {
               </select>
             </div>
 
-            {/* Travel Date */}
+          
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Select Travel Date
