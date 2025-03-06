@@ -8,8 +8,10 @@ import image5 from './image-5.jpg';
 import image6 from './image-6.jpg';
 import image7 from './image-7.jpg';
 import image8 from './image-8.jpeg';
+import tourImg from './tour-img.jpg';
 
 export const assets = {
+  tourImg,
   heroImg,
   heroImg2,
   heroImg3,

@@ -7,7 +7,7 @@ const ToursPage = () => {
       
       <div
         className="relative h-[470px] bg-cover bg-center flex items-center justify-center text-white"
-        style={{ backgroundImage: `url(${assets.image6})` }}
+        style={{ backgroundImage: `url(${assets.tourImg})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -36,19 +36,16 @@ const ToursPage = () => {
         </motion.div>
       </div>
 
-     
       <div className="text-center py-16 px-6 bg-gradient-to-b from-blue-100 to-white">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Experience Ghana Like Never Before</h2>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-          Discover Ghana’s historical landmarks, cultural experiences, and vibrant landscapes on this 7-day guided tour.
+          Discover Ghana's historical landmarks, cultural experiences, and vibrant landscapes on this 7-day guided tour.
         </p>
       </div>
 
-
       <div className="container mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">📅 Itinerary</h2>
+        <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">Itinerary</h2>
         
-       
         {[
           { day: "Day 1", title: "Arrival & Welcome Dinner", details: "Check-in at your hotel & enjoy a welcome dinner at Buka Restaurant, Osu.", image: assets.image7 },
           { day: "Day 2", title: "Accra City Tour", details: "Visit the W.E.B. Du Bois Center, National Museum, and more.", image: assets.image8 },
@@ -74,9 +71,8 @@ const ToursPage = () => {
         ))}
       </div>
 
-      {/* Video Section */}
       <div className="bg-gray-900 text-white py-16 text-center">
-        <h2 className="text-4xl font-bold mb-6">🎥 Watch Our Tour Video</h2>
+        <h2 className="text-4xl font-bold mb-6">Watch Our Tour Video</h2>
         <div className="max-w-4xl mx-auto">
           <iframe
             width="100%"
@@ -89,14 +85,13 @@ const ToursPage = () => {
         </div>
       </div>
 
-   
       <div className="text-center py-16 bg-gradient-to-b from-white to-blue-100">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Book Your Spot Today! 🎟</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Book Your Spot Today!</h2>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-          💲 **Tour Price:** **$2,500 per person** – Includes guided tours, accommodation, transport & meals.  
+          **Tour Price:** $2,500 per person – Includes guided tours, accommodation, transport & meals.
         </p>
         <p className="mt-4 text-lg text-gray-600">
-          📩 **Contact Us for Reservations & Customization**
+          **Contact Us for Reservations & Customization**
         </p>
         <button className="mt-6 bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:bg-blue-700 transition">
           Reserve Now
