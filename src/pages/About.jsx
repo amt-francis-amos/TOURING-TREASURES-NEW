@@ -34,6 +34,7 @@ const About = () => {
           </motion.p>
         </motion.div>
       </div>
+      
       <div className="text-center py-16 px-6 bg-gradient-to-b from-blue-100 to-white">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
           Get to Know Us Better
@@ -60,7 +61,6 @@ const About = () => {
             />
           </motion.div>
 
-         
           <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
@@ -84,6 +84,24 @@ const About = () => {
               throughout your journey.
             </p>
           </motion.div>
+        </div>
+      </div>
+
+      {/* Beautiful Tour Video Section */}
+      <div className="bg-gray-900 py-16 text-center">
+        <h2 className="text-4xl font-bold text-white mb-4">Experience Our Tours</h2>
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
+          Watch our exclusive tour video and get a glimpse of the amazing places and experiences we offer.
+        </p>
+        <div className="relative w-full max-w-4xl mx-auto">
+          <iframe
+            className="w-full h-[400px] md:h-[500px] rounded-xl shadow-lg"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Tour Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
