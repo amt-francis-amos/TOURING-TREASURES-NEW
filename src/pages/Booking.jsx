@@ -1,138 +1,123 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { assets } from "../assets/assets";
 
-const BookingPage = () => {
-  const [selectedTour, setSelectedTour] = useState("");
-  const [travelDate, setTravelDate] = useState("");
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [participants, setParticipants] = useState(1);
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Booking submitted! We will contact you soon.");
+    alert("Message sent successfully! 🚀");
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="bg-gray-50 min-h-screen">
      
-      <div className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center text-white" 
-        style={{ backgroundImage: `url(${assets.bookingImg})` }}>
+      <section
+        className="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-white"
+        style={{
+          backgroundImage: `url(${assets.contactImg})`,
+        }}
+      >
+        
         <div className="absolute inset-0 bg-black opacity-50"></div>
+
         <div className="relative text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-bold">Book Your Next Adventure</h1>
-          <p className="mt-4 text-lg md:text-xl">Plan the perfect trip with Touring Treasures</p>
+          <h1 className="text-4xl md:text-5xl font-bold">Contact Us</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Have questions or need support? Reach out and let's talk.
+          </p>
         </div>
-      </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+       
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Send us a message</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="w-full p-3 border rounded-lg focus:border-blue-500 outline-none"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="w-full p-3 border rounded-lg focus:border-blue-500 outline-none"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              className="w-full p-3 border rounded-lg focus:border-blue-500 outline-none"
+              rows="4"
+              required
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        
+        <div className="bg-white p-6 rounded-lg shadow-md flex flex-col space-y-6">
+          <div className="flex items-center space-x-4">
+            <FaPhoneAlt className="text-blue-600 text-2xl" />
+            <div>
+              <h3 className="text-lg font-semibold">Phone</h3>
+              <p className="text-gray-700">+233 123 456 789</p>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <FaEnvelope className="text-blue-600 text-2xl" />
+            <div>
+              <h3 className="text-lg font-semibold">Email</h3>
+              <p className="text-gray-700">info@sugarmedia.com</p>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <FaMapMarkerAlt className="text-blue-600 text-2xl" />
+            <div>
+              <h3 className="text-lg font-semibold">Location</h3>
+              <p className="text-gray-700">Accra, Ghana</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
      
-      <div className="flex items-center justify-center px-4 py-12">
-        <motion.div
-          className="bg-white shadow-lg rounded-lg p-8 mt-10 max-w-3xl w-full"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-            Book Your Tour
-          </h2>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Select a Tour Package
-              </label>
-              <select
-                value={selectedTour}
-                onChange={(e) => setSelectedTour(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              >
-                <option value="">Choose a Package</option>
-                <option value="Panafest Tour 2025">Panafest Tour 2025 - $2,500</option>
-                <option value="Safari Adventure">Safari Adventure - $3,000</option>
-                <option value="Cultural Heritage Tour">Cultural Heritage Tour - $2,200</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Select Travel Date
-              </label>
-              <input
-                type="date"
-                value={travelDate}
-                onChange={(e) => setTravelDate(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Full Name</label>
-              <input
-                type="text"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                placeholder="Enter your full name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                placeholder="Enter your email"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                Number of Participants
-              </label>
-              <input
-                type="number"
-                value={participants}
-                onChange={(e) => setParticipants(e.target.value)}
-                min="1"
-                className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition"
-              type="submit"
-            >
-              Proceed to Payment
-            </motion.button>
-          </form>
-        </motion.div>
-      </div>
+      <section className="max-w-7xl mx-auto px-6 pb-12">
+        <iframe
+          className="w-full h-80 rounded-lg shadow-md"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508619!2d144.95373531592516!3d-37.817209742021026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df94f9bff%3A0xf4c9fef7e70a8ed7!2sMelbourne%20CBD!5e0!3m2!1sen!2sau!4v1633074744392!5m2!1sen!2sau"
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
+      </section>
     </div>
   );
 };
 
-export default BookingPage;
+export default ContactPage;

@@ -16,8 +16,10 @@ import pic1 from './pic-1.jpg';
 import panafestImg from './panafest.jpg';
 import cultureImg from './culture.jpg';
 import bookingImg from './booking.jpg';
+import contactImg from './contact-img.jpg';
 
 export const assets = {
+  contactImg,
   bookingImg,
   castleImg,
   cityImg,
