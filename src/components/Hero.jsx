@@ -1,48 +1,70 @@
 import { motion } from "framer-motion";
-import { assets } from "../assets/assets";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import { assets, slides } from "../assets/assets";
 
 const Hero = () => {
+
+
+  
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    fade: true,
+    arrows: false,
+  };
+
   return (
-    <div
-      className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
-      style={{ backgroundImage: `url(${assets.heroImg})` }}
-    >
-      
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+    <div className="relative h-screen">
+      <Slider {...settings} className="h-full">
+        {slides.map((slide) => (
+          <div key={slide.id} className="relative h-screen">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            />
+            <div className="absolute inset-0 bg-black opacity-50"></div>
 
-     
-      <motion.div
-        className="relative text-center z-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <motion.h1
-          className="text-4xl md:text-6xl font-bold"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          Explore the World with Us
-        </motion.h1>
-
-        <motion.p
-          className="mt-4 text-lg md:text-xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-        >
-          Find the best travel destinations and tour packages.
-        </motion.p>
-
-        <motion.button
-          className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Discover Now
-        </motion.button>
-      </motion.div>
+            <motion.div
+              className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <motion.h1
+                className="text-4xl md:text-6xl font-bold"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                {slide.title}
+              </motion.h1>
+              <motion.p
+                className="mt-4 text-lg md:text-xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                {slide.text}
+              </motion.p>
+              <motion.button
+                className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Discover Now
+              </motion.button>
+            </motion.div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };

@@ -42,3 +42,27 @@ export const destinations = [
     description: "Breathtaking views, white-washed houses, and crystal-clear waters.",
   },
 ];
+
+
+
+
+export const slides = [
+  {
+    id: 1,
+    image: assets.heroImg,
+    title: "Explore Breathtaking Destinations",
+    text: "Find the best places to travel and explore nature's beauty.",
+  },
+  {
+    id: 2,
+    image: assets.heroImg2,
+    title: "Discover New Adventures",
+    text: "Adventure awaits—plan your next thrilling experience.",
+  },
+  {
+    id: 3,
+    image: assets.heroImg3,
+    title: "Luxury Travel Like Never Before",
+    text: "Enjoy high-end travel experiences with comfort and elegance.",
+  },
+];
