@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { assets } from "../assets/assets";
 
 const BookingPage = () => {
   const [selectedTour, setSelectedTour] = useState("");
@@ -18,7 +19,7 @@ const BookingPage = () => {
     <div className="min-h-screen bg-gray-100">
      
       <div className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center text-white" 
-        style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?travel,adventure')" }}>
+        style={{ backgroundImage: `url(${assets.bookingImg})` }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative text-center px-6">
           <h1 className="text-4xl md:text-5xl font-bold">Book Your Next Adventure</h1>
