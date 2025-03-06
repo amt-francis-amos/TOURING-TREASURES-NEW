@@ -85,7 +85,7 @@ const ContactPage = () => {
             <FaPhoneAlt className="text-blue-600 text-2xl" />
             <div>
               <h3 className="text-lg font-semibold">Phone</h3>
-              <p className="text-gray-700">+233 123 456 789</p>
+              <p className="text-gray-700">+233 059 465 4002</p>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ const ContactPage = () => {
             <FaEnvelope className="text-blue-600 text-2xl" />
             <div>
               <h3 className="text-lg font-semibold">Email</h3>
-              <p className="text-gray-700">info@sugarmedia.com</p>
+              <p className="text-gray-700">info@touringTreasures.com</p>
             </div>
           </div>
 
