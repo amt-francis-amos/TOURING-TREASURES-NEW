@@ -87,9 +87,9 @@ const About = () => {
         </div>
       </div>
 
-      {/* Beautiful Tour Video Section */}
+     
       <div className="bg-gray-900 py-16 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Experience Our Tours</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Experience Our Tours</h2>
         <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
           Watch our exclusive tour video and get a glimpse of the amazing places and experiences we offer.
         </p>
