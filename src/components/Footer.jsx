@@ -26,9 +26,9 @@ const Footer = () => {
         
         <div>
           <h3 className="text-lg font-semibold text-white">Contact Us</h3>
-          <p className="mt-4 text-sm">123 Travel Street, Elmina, Ghana</p>
-          <p className="text-sm">Email: info@travelx.com</p>
-          <p className="text-sm">Phone: +233 123 456 789</p>
+          <p className="mt-4 text-sm">Near Lemon Beach, Elmina, Ghana</p>
+          <p className="text-sm">Email: info@touringTreasures.com</p>
+          <p className="text-sm">Phone: +233 059 465 4002</p>
         </div>
 
         
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Social Media & Copyright */}
+    
       <div className="mt-12 border-t border-gray-700 pt-6 text-center">
         <div className="flex justify-center space-x-6">
           <a href="#" className="text-gray-400 hover:text-white transition"><FaFacebookF /></a>
@@ -56,7 +56,7 @@ const Footer = () => {
           <a href="#" className="text-gray-400 hover:text-white transition"><FaInstagram /></a>
           <a href="#" className="text-gray-400 hover:text-white transition"><FaLinkedin /></a>
         </div>
-        <p className="mt-4 text-sm">&copy; {new Date().getFullYear()} TravelX. All rights reserved.</p>
+        <p className="mt-4 text-sm">&copy; {new Date().getFullYear()} Touring Treasures. All rights reserved.</p>
       </div>
     </footer>
   );
