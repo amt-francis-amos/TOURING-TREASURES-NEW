@@ -19,7 +19,7 @@ const BookingPage = () => {
      
       <div className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center text-white" 
         style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?travel,adventure')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative text-center px-6">
           <h1 className="text-4xl md:text-5xl font-bold">Book Your Next Adventure</h1>
           <p className="mt-4 text-lg md:text-xl">Plan the perfect trip with Touring Treasures</p>
