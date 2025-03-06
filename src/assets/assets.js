@@ -7,6 +7,7 @@ import image4 from './image-4.jpg';
 import image5 from './image-5.jpg';
 import image6 from './image-6.jpg';
 import image7 from './image-7.jpg';
+import image8 from './image-8.jpeg';
 
 export const assets = {
   heroImg,
@@ -17,7 +18,8 @@ export const assets = {
   image4,
   image5,
   image6,
-  image7
+  image7,
+  image8
 };
 
 export const destinations = [
@@ -35,8 +37,8 @@ export const destinations = [
   },
   {
     id: 3,
-    name: "Dubai, UAE",
-    image: assets.image4,
+    name: "Ghana, Kotoka international Airport",
+    image: assets.image8,
     description: "A luxurious escape filled with towering skyscrapers and desert adventures.",
   },
   {
