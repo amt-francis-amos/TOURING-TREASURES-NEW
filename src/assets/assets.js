@@ -9,8 +9,20 @@ import image6 from './image-6.jpg';
 import image7 from './image-7.jpg';
 import image8 from './image-8.jpeg';
 import tourImg from './tour-img.jpg';
+import castleImg from './castle.jpg';
+import cityImg from './city-img.jpg';
+import departImg from './depart.jpg';
+import pic1 from './pic-1.jpg';
+import panafestImg from './panafest.jpg';
+import cultureImg from './culture.jpg';
 
 export const assets = {
+  castleImg,
+  cityImg,
+  cultureImg,
+  departImg,
+  pic1,
+  panafestImg,
   tourImg,
   heroImg,
   heroImg2,

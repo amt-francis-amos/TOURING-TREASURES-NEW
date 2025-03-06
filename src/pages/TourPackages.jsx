@@ -44,16 +44,15 @@ const ToursPage = () => {
       </div>
 
       <div className="container mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-12">Itinerary</h2>
-        
+
         {[
-          { day: "Day 1", title: "Arrival & Welcome Dinner", details: "Check-in at your hotel & enjoy a welcome dinner at Buka Restaurant, Osu.", image: assets.image7 },
-          { day: "Day 2", title: "Accra City Tour", details: "Visit the W.E.B. Du Bois Center, National Museum, and more.", image: assets.image8 },
-          { day: "Day 3", title: "Road Trip to Cape Coast", details: "Explore Cape Coast and attend a colloquium at University of Cape Coast.", image: assets.image9 },
-          { day: "Day 4", title: "Elmina Castle & Boat Cruise", details: "Tour the historic Elmina Castle and enjoy a boat cruise.", image: assets.image10 },
-          { day: "Day 5", title: "Cultural Exploration", details: "Visit a school, explore Cape Coast Castle, and experience Kakum National Park.", image: assets.image11 },
-          { day: "Day 6", title: "Emancipation Day & Beach Dinner", details: "Learn to cook Ghanaian dishes and celebrate Emancipation Day.", image: assets.image12 },
-          { day: "Day 7", title: "Departure", details: "Bid farewell and depart from Ghana.", image: assets.image13 },
+          { day: "Day 1", title: "Arrival & Welcome Dinner", details: "Check-in at your hotel & enjoy a welcome dinner at Buka Restaurant, Osu.", image: assets.image8 },
+          { day: "Day 2", title: "Accra City Tour", details: "Visit the W.E.B. Du Bois Center, National Museum, and more.", image: assets.pic1 },
+          { day: "Day 3", title: "Road Trip to Cape Coast", details: "Explore Cape Coast and attend a colloquium at University of Cape Coast.", image:assets.panafestImg },
+          { day: "Day 4", title: "Elmina Castle & Boat Cruise", details: "Tour the historic Elmina Castle and enjoy a boat cruise.", image: assets.castleImg },
+          { day: "Day 5", title: "Cultural Exploration", details: "Visit a school, explore Cape Coast Castle, and experience Kakum National Park.", image: assets.cultureImg },
+          { day: "Day 6", title: "Emancipation Day & Beach Dinner", details: "Learn to cook Ghanaian dishes and celebrate Emancipation Day.", image: assets.image5 },
+          { day: "Day 7", title: "Departure", details: "Bid farewell and depart from Ghana.", image: assets.departImg},
         ].map((item, index) => (
           <motion.div
             key={index}
@@ -74,14 +73,7 @@ const ToursPage = () => {
       <div className="bg-gray-900 text-white py-16 text-center">
         <h2 className="text-4xl font-bold mb-6">Watch Our Tour Video</h2>
         <div className="max-w-4xl mx-auto">
-          <iframe
-            width="100%"
-            height="450"
-            src="https://youtu.be/yJ1FBknGMNM?si=IN4VyRUdGntmmzSl"
-            title="Ghana Tour Video"
-            className="rounded-xl shadow-lg"
-            allowFullScreen
-          ></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yJ1FBknGMNM?si=Jfan1mJfMH8W6VEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
 

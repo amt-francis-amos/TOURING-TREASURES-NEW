@@ -94,14 +94,7 @@ const About = () => {
           Watch our exclusive tour video and get a glimpse of the amazing places and experiences we offer.
         </p>
         <div className="relative w-full max-w-4xl mx-auto">
-          <iframe
-            className="w-full h-[400px] md:h-[500px] rounded-xl shadow-lg"
-            src="https://youtu.be/yJ1FBknGMNM?si=IN4VyRUdGntmmzSl"
-            title="Tour Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yJ1FBknGMNM?si=Jfan1mJfMH8W6VEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
