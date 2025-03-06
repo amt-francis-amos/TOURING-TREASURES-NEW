@@ -88,10 +88,10 @@ const ToursPage = () => {
       <div className="text-center py-16 bg-gradient-to-b from-white to-blue-100">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Book Your Spot Today!</h2>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-          **Tour Price:** $2,500 per person – Includes guided tours, accommodation, transport & meals.
+          Tour Price:$2,500 per person – Includes guided tours, accommodation, transport & meals.
         </p>
         <p className="mt-4 text-lg text-gray-600">
-          **Contact Us for Reservations & Customization**
+          Contact Us for Reservations & Customization
         </p>
         <button className="mt-6 bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:bg-blue-700 transition">
           Reserve Now
