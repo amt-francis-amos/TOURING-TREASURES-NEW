@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { assets } from "../assets/assets";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -20,18 +21,25 @@ const ContactPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
      
-      <section className="relative bg-blue-600 text-white py-20 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
-          <p className="mt-4 text-lg md:text-xl opacity-90">
-            Have questions or need support? Our team is ready to help. Reach out to us!
+      <section
+        className="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-white"
+        style={{
+          backgroundImage: `url(${assets.contactImg})`,
+        }}
+      >
+        
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
+        <div className="relative text-center px-6">
+          <h1 className="text-4xl md:text-5xl font-bold">Contact Us</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Have questions or need support? Reach out and let's talk.
           </p>
         </div>
       </section>
 
-      
       <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
+       
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Send us a message</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -71,7 +79,7 @@ const ContactPage = () => {
           </form>
         </div>
 
-      
+        
         <div className="bg-white p-6 rounded-lg shadow-md flex flex-col space-y-6">
           <div className="flex items-center space-x-4">
             <FaPhoneAlt className="text-blue-600 text-2xl" />
@@ -99,7 +107,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      
+     
       <section className="max-w-7xl mx-auto px-6 pb-12">
         <iframe
           className="w-full h-80 rounded-lg shadow-md"
