@@ -26,7 +26,8 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-white">Contact Us</h3>
           <p className="mt-4 text-sm">Near Lemon Beach, Elmina, Ghana</p>
           <p className="text-sm">Email: info@touringTreasures.com</p>
-          <p className="text-sm">Phone:+233 248 055 114</p>
+          <p className="text-sm">Phone: +233 059 465 4002</p>
+          <p className="text-sm">whatsapp: +233 248 055 114</p>
         </div>
 
         <div>
