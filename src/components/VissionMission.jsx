@@ -24,7 +24,7 @@ const VisionMission = () => {
           >
             <h3 className="text-2xl font-semibold text-blue-500">Our Vision</h3>
             <p className="mt-4 text-gray-700">
-              To inspire and empower individuals to explore the world, embracing cultures and creating unforgettable experiences.
+            To be the leading travel and tour company, inspiring people to explore the world with unforgettable experiences. We envision a future where travel is seamless, enriching, and accessible to all, fostering cultural connections and lifelong memories.
             </p>
           </motion.div>
 
@@ -37,7 +37,7 @@ const VisionMission = () => {
           >
             <h3 className="text-2xl font-semibold text-blue-500">Our Mission</h3>
             <p className="mt-4 text-gray-700">
-              To provide exceptional travel experiences with seamless services, ensuring comfort, safety, and meaningful connections.
+            Our mission is to provide exceptional travel services, offering personalized tours, hassle-free bookings, and immersive adventures. We are committed to customer satisfaction, safety, and sustainability, ensuring every journey is enjoyable and responsible. With a passion for exploration, we create experiences that turn dreams into reality.
             </p>
           </motion.div>
         </div>
