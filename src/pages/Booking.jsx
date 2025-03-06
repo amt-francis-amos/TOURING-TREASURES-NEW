@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { assets } from "../assets/assets";
 
 const BookingPage = () => {
   const [selectedTour, setSelectedTour] = useState("");
@@ -16,41 +15,21 @@ const BookingPage = () => {
   };
 
   return (
-    <div>
-   
-      <section
-        className="relative bg-cover bg-center h-[500px] flex items-center justify-center text-white text-center"
-        style={{
-          backgroundImage: `url(${assets.bookingImg})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Explore the World with Us
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Discover breathtaking destinations and unforgettable adventures.
-          </p>
-          <a href="#booking-form">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 px-6 py-3 text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
-            >
-              Book Now
-            </motion.button>
-          </a>
+    <div className="min-h-screen bg-gray-100">
+     
+      <div className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center text-white" 
+        style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?travel,adventure')" }}>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative text-center px-6">
+          <h1 className="text-4xl md:text-5xl font-bold">Book Your Next Adventure</h1>
+          <p className="mt-4 text-lg md:text-xl">Plan the perfect trip with Touring Treasures</p>
         </div>
-      </section>
+      </div>
 
-   
-      <div
-        id="booking-form"
-        className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-12"
-      >
+     
+      <div className="flex items-center justify-center px-4 py-12">
         <motion.div
-          className="bg-white shadow-lg rounded-lg p-8 mt-20 max-w-3xl w-full"
+          className="bg-white shadow-lg rounded-lg p-8 mt-10 max-w-3xl w-full"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -60,7 +39,6 @@ const BookingPage = () => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-           
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Select a Tour Package
@@ -78,7 +56,6 @@ const BookingPage = () => {
               </select>
             </div>
 
-          
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Select Travel Date
@@ -104,7 +81,6 @@ const BookingPage = () => {
               />
             </div>
 
-            {/* Email */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">Email</label>
               <input
@@ -117,7 +93,6 @@ const BookingPage = () => {
               />
             </div>
 
-          
             <div>
               <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
               <input
@@ -130,7 +105,6 @@ const BookingPage = () => {
               />
             </div>
 
-            
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Number of Participants
@@ -145,7 +119,6 @@ const BookingPage = () => {
               />
             </div>
 
-      
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
