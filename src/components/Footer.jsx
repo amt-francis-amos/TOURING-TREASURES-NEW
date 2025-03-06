@@ -4,15 +4,15 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {/* Company Info */}
+      
         <div>
-          <h2 className="text-xl font-bold text-white">TravelX</h2>
+          <h2 className="text-xl font-bold text-white">Touring Treasures</h2>
           <p className="mt-4 text-sm">
             Explore the world with the best travel packages and destinations.
           </p>
         </div>
 
-        {/* Links */}
+      
         <div>
           <h3 className="text-lg font-semibold text-white">Quick Links</h3>
           <ul className="mt-4 space-y-2">
@@ -23,15 +23,15 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
+        
         <div>
           <h3 className="text-lg font-semibold text-white">Contact Us</h3>
-          <p className="mt-4 text-sm">123 Travel Street, Accra, Ghana</p>
+          <p className="mt-4 text-sm">123 Travel Street, Elmina, Ghana</p>
           <p className="text-sm">Email: info@travelx.com</p>
           <p className="text-sm">Phone: +233 123 456 789</p>
         </div>
 
-        {/* Newsletter */}
+        
         <div>
           <h3 className="text-lg font-semibold text-white">Subscribe</h3>
           <p className="mt-4 text-sm">Stay updated with our latest offers and travel deals.</p>
