@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-import { assets, slides } from "../assets/assets";
+import { assets,slides } from "../assets/assets";
+
+
 
 const Hero = () => {
+  let sliderRef = null;
 
-
-  
   const settings = {
     dots: true,
     infinite: true,
@@ -18,12 +20,12 @@ const Hero = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     fade: true,
-    arrows: false,
+    arrows: false, 
   };
 
   return (
     <div className="relative h-screen">
-      <Slider {...settings} className="h-full">
+      <Slider {...settings} ref={(slider) => (sliderRef = slider)} className="h-full">
         {slides.map((slide) => (
           <div key={slide.id} className="relative h-screen">
             <div
@@ -65,6 +67,21 @@ const Hero = () => {
           </div>
         ))}
       </Slider>
+
+    
+      <button
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 rounded-full hover:bg-opacity-75"
+        onClick={() => sliderRef?.slickPrev()}
+      >
+        <FaArrowLeft size={20} />
+      </button>
+
+      <button
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 rounded-full hover:bg-opacity-75"
+        onClick={() => sliderRef?.slickNext()}
+      >
+        <FaArrowRight size={20} />
+      </button>
     </div>
   );
 };
