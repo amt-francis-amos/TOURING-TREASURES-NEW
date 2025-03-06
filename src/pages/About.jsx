@@ -4,7 +4,6 @@ import { assets } from "../assets/assets";
 const About = () => {
   return (
     <div className="relative">
-   
       <div
         className="relative h-[470px] bg-cover bg-center flex items-center justify-center text-white"
         style={{ backgroundImage: `url(${assets.image6})` }}
@@ -35,11 +34,19 @@ const About = () => {
           </motion.p>
         </motion.div>
       </div>
-
-      {/* About Content */}
+      <div className="text-center py-16 px-6 bg-gradient-to-b from-blue-100 to-white">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+          Get to Know Us Better
+        </h1>
+        <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          We are more than just a travel agency – we create meaningful experiences. 
+          Explore our journey, our mission, and how we strive to make every trip unforgettable.
+        </p>
+      </div>
+    
       <div className="container mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row justify-between gap-12">
-          {/* Image Section */}
+         
           <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: -50 }}
@@ -53,7 +60,7 @@ const About = () => {
             />
           </motion.div>
 
-          {/* Text Section */}
+         
           <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
