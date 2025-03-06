@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { assets } from "../assets/assets";
 
 const BookingPage = () => {
   const [selectedTour, setSelectedTour] = useState("");
@@ -20,7 +21,7 @@ const BookingPage = () => {
       <section
         className="relative bg-cover bg-center h-[500px] flex items-center justify-center text-white text-center"
         style={{
-          backgroundImage: `url(${asset.image1})`,
+          backgroundImage: `url(${assets.bookingImg})`,
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
