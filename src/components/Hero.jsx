@@ -70,14 +70,14 @@ const Hero = () => {
 
     
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 rounded-full hover:bg-opacity-75"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 bg-opacity-50 text-white p-4 rounded-full hover:bg-opacity-75"
         onClick={() => sliderRef?.slickPrev()}
       >
         <FaArrowLeft size={20} />
       </button>
 
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 rounded-full hover:bg-opacity-75"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 bg-opacity-50 text-white p-4 rounded-full hover:bg-opacity-75"
         onClick={() => sliderRef?.slickNext()}
       >
         <FaArrowRight size={20} />
