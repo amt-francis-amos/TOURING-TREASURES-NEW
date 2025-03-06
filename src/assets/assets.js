@@ -1,4 +1,6 @@
 import heroImg from './image-1.jpg'; 
+import heroImg2 from './hero-img2.jpg'; 
+import heroImg3 from './hero-img3.jpg'; 
 import image2 from './image-2.jpg';
 import image3 from './image-3.jpg';
 import image4 from './image-4.jpg';
@@ -8,6 +10,8 @@ import image7 from './image-7.jpg';
 
 export const assets = {
   heroImg,
+  heroImg2,
+  heroImg3,
   image2,
   image3,
   image4,
