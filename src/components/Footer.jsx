@@ -12,7 +12,6 @@ const Footer = () => {
           </p>
         </div>
 
-      
         <div>
           <h3 className="text-lg font-semibold text-white">Quick Links</h3>
           <ul className="mt-4 space-y-2">
@@ -23,7 +22,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        
         <div>
           <h3 className="text-lg font-semibold text-white">Contact Us</h3>
           <p className="mt-4 text-sm">Near Lemon Beach, Elmina, Ghana</p>
@@ -31,7 +29,6 @@ const Footer = () => {
           <p className="text-sm">Phone: +233 059 465 4002</p>
         </div>
 
-        
         <div>
           <h3 className="text-lg font-semibold text-white">Subscribe</h3>
           <p className="mt-4 text-sm">Stay updated with our latest offers and travel deals.</p>
@@ -48,13 +45,22 @@ const Footer = () => {
         </div>
       </div>
 
-    
       <div className="mt-12 border-t border-gray-700 pt-6 text-center">
-        <div className="flex justify-center space-x-6">
-          <a href="#" className="text-gray-400 hover:text-white transition"><FaFacebookF /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition"><FaTwitter /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition"><FaInstagram /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition"><FaLinkedin /></a>
+        <div className="flex justify-center space-x-4">
+          {[
+            { icon: FaFacebookF, link: "#" },
+            { icon: FaTwitter, link: "#" },
+            { icon: FaInstagram, link: "#" },
+            { icon: FaLinkedin, link: "#" }
+          ].map((item, index) => (
+            <a 
+              key={index} 
+              href={item.link} 
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition text-white text-lg"
+            >
+              <item.icon />
+            </a>
+          ))}
         </div>
         <p className="mt-4 text-sm">&copy; {new Date().getFullYear()} Touring Treasures. All rights reserved.</p>
       </div>
