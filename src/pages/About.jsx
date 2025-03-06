@@ -96,7 +96,7 @@ const About = () => {
         <div className="relative w-full max-w-4xl mx-auto">
           <iframe
             className="w-full h-[400px] md:h-[500px] rounded-xl shadow-lg"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://youtu.be/yJ1FBknGMNM?si=IN4VyRUdGntmmzSl"
             title="Tour Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
